@@ -107,6 +107,7 @@ export default function Login() {
               {/* <p>{ formErrors.username}</p> */}
               {/* <input type="password" placeholder="Password" />
               {/* <p>{ formErrors.password}</p> */}
+              {/* <input type="button" value="" /> */}
               {/* <button type="submit">Log In</button> */}
             {/* </form> */}
           {/* </div> */}
@@ -187,4 +188,4 @@ const FormContainer = styled.div`
       font-weight: bold;
     }
   }
-`;
+ `;
