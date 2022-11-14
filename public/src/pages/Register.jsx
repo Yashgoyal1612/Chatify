@@ -128,7 +128,7 @@ export default function Register() {
                 <div className="left">
                     <h1>Chatify</h1>
                     <p>A Platform that enables private message functionality between you and your friend. <b>Watch Together Chat Together Stay Together</b></p>
-                    <span>Do have an account ?</span>
+                    <span><h4>Do have an account ?</h4></span>
                     <Link to="/login">
                     <button>Login</button>
                     </Link>
@@ -141,7 +141,7 @@ export default function Register() {
                         <input type="password" placeholder="Password" name="password" onChange={(e) => handleChange(e)}/>
                         <input type="password" placeholder="Confirm Password" name="confirmPassword" onChange={(e) => handleChange(e)}/>
 
-                        <button onClick={PostData}>Register</button>
+                        <button>Register</button>
                     </form>
                 </div>
             </div>

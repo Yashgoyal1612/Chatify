@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import "./login.scss"
-import styled from "styled-components";
+import "./login.scss"
+// import styled from "styled-components";
 import { useNavigate, Link } from "react-router-dom";
-import Logo from "../assets/logo.svg";
+// import Logo from "../assets/logo.svg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { loginRoute } from "../utils/APIRoutes";
@@ -30,11 +30,14 @@ export default function Login() {
 
   const validateForm = () => {
     const { username, password } = values;
-    if (username === "") {
-      toast.error("Email and Password is required.", toastOptions);
+    if (username === "" && password === "") {
+      toast.error("Username and Password are required.", toastOptions);
+      return false;
+    } else if (username === "") {
+      toast.error("Username is required.", toastOptions);
       return false;
     } else if (password === "") {
-      toast.error("Email and Password is required.", toastOptions);
+      toast.error("Password is required.", toastOptions);
       return false;
     }
     return true;
@@ -64,8 +67,8 @@ export default function Login() {
 
   return (
     <>
-      <FormContainer>
-      <form action="" onSubmit={(event) => handleSubmit(event)}>
+      {/* <FormContainer> */}
+      {/* <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
             <img src={Logo} alt="logo" />
             <h1>snappy</h1>
@@ -87,10 +90,10 @@ export default function Login() {
           <span>
             Don't have an account ? <Link to="/register">Create One.</Link>
           </span>
-        </form>
+        </form> */}
 
-        {/* ITS MINE */}
-      {/* <div className="login">
+      {/* ITS MINE */}
+      <div className="login">
         <div className="card">
           <div className="left">
             <h1>Chatify</h1>
@@ -102,90 +105,102 @@ export default function Login() {
           </div>
           <div className="right">
             <h1>Login</h1>
-            <form >
-              <input type="text" placeholder="Username" />
-              {/* <p>{ formErrors.username}</p> */}
-              {/* <input type="password" placeholder="Password" />
-              {/* <p>{ formErrors.password}</p> */}
-              {/* <input type="button" value="" /> */}
-              {/* <button type="submit">Log In</button> */}
-            {/* </form> */}
-          {/* </div> */}
-        {/* // </div> */}
-      {/* // </div> */}
-      </FormContainer>
+            <div className="brand">
+              {/* <img alt="logo" /> */}
+              {/* <h1>snappy</h1> */}
+            </div>
+            <form action="" onSubmit={(event) => handleSubmit(event)}>
+              <input
+                type="text"
+                placeholder="Username"
+                name="username"
+                onChange={(e) => handleChange(e)}
+                min="3"
+              />
+              <input
+                type="password"
+                placeholder="Password"
+                name="password"
+                onChange={(e) => handleChange(e)}
+              />
+              <button type="submit">Log In</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      {/* </FormContainer> */}
       <ToastContainer />
-        {/* ITS MINE */}
+      {/* ITS MINE */}
 
     </>
   );
 }
 
-const FormContainer = styled.div`
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1rem;
-  align-items: center;
-  background-color: #131324;
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    img {
-      height: 5rem;
-    }
-    h1 {
-      color: white;
-      text-transform: uppercase;
-    }
-  }
+// const FormContainer = styled.div`
+//   height: 100vh;
+//   width: 100vw;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   gap: 1rem;
+//   align-items: center;
+//   background-color: #131324;
+//   .brand {
+//     display: flex;
+//     align-items: center;
+//     gap: 1rem;
+//     justify-content: center;
+//     img {
+//       height: 5rem;
+//     }
+//     h1 {
+//       color: white;
+//       text-transform: uppercase;
+//     }
+//   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    background-color: #00000076;
-    border-radius: 2rem;
-    padding: 5rem;
-  }
-  input {
-    background-color: transparent;
-    padding: 1rem;
-    border: 0.1rem solid #4e0eff;
-    border-radius: 0.4rem;
-    color: white;
-    width: 100%;
-    font-size: 1rem;
-    &:focus {
-      border: 0.1rem solid #997af0;
-      outline: none;
-    }
-  }
-  button {
-    background-color: #4e0eff;
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 0.4rem;
-    font-size: 1rem;
-    text-transform: uppercase;
-    &:hover {
-      background-color: #4e0eff;
-    }
-  }
-  span {
-    color: white;
-    text-transform: uppercase;
-    a {
-      color: #4e0eff;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  }
- `;
+//   form {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 2rem;
+//     background-color: #00000076;
+//     border-radius: 2rem;
+//     padding: 5rem;
+//   }
+//   input {
+//     background-color: transparent;
+//     padding: 1rem;
+//     border: 0.1rem solid #4e0eff;
+//     border-radius: 0.4rem;
+//     color: white;
+//     width: 100%;
+//     font-size: 1rem;
+//     &:focus {
+//       border: 0.1rem solid #997af0;
+//       outline: none;
+//     }
+//   }
+//   button {
+//     background-color: #4e0eff;
+//     color: white;
+//     padding: 1rem 2rem;
+//     border: none;
+//     font-weight: bold;
+//     cursor: pointer;
+//     border-radius: 0.4rem;
+//     font-size: 1rem;
+//     text-transform: uppercase;
+//     &:hover {
+//       background-color: #4e0eff;
+//     }
+//   }
+//   span {
+//     color: white;
+//     text-transform: uppercase;
+//     a {
+//       color: #4e0eff;
+//       text-decoration: none;
+//       font-weight: bold;
+//     }
+//   }
+//  `;
