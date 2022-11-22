@@ -22,7 +22,7 @@ export default function ChatInput({ handleSendMsg }) {
     if (msg.length > 0) {
       handleSendMsg(msg);
       setMsg("");
-    }
+    } 
   };
 
   return (
@@ -36,7 +36,7 @@ export default function ChatInput({ handleSendMsg }) {
       <form className="input-container" onSubmit={(event) => sendChat(event)}>
         <input
           type="text"
-          placeholder="type your message here"
+          placeholder="Type your message here..."
           onChange={(e) => setMsg(e.target.value)}
           value={msg}
         />
