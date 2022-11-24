@@ -9,73 +9,6 @@
 body
 {
     overflow: hidden;
-<<<<<<< HEAD
-    background-image: url("../assets/login_img2.png");
-    background-size: cover;
-}
-section
-{
-    /* centering the items  */
-    border: solid;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    // background: linear-gradient(to bottom,#f1f4f9,#dff1ff);
-}
-.con
-{
-    
-    position: relative;
-    width: 350px;
-    min-height: 400px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255,255,255,0.5);
-    border-right: 1px solid rgba(255,255,255,0.2);
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    
-}
-.form
-{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    padding: 40px;
-    
-}
-.form h1
-{
-    /* Log in heading  */
-    position: relative;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 40px;
-    justify-content: center;
-    display: flex;
-    
-}
-.form h1::before
-{
-    /* underlining  */
-    content: '';
-    position: absolute;
-    left: 25%;
-    bottom: -10px;
-    width: 50%;
-    height: 3px;
-    background: #fff;
-    justify-content: center;
-    display: flex;
-
-=======
    background-image: url('../assets/1.png');
 
     background-size: cover;
@@ -100,17 +33,12 @@ section
     border-radius: 40px;
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
     align-items: center;
     backdrop-filter: blur(5px);
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
     border: 1px solid rgba(255,255,255,0.5);
     border-right: 1px solid rgba(255,255,255,0.2);
     border-bottom: 1px solid rgba(255,255,255,0.2);
-=======
-    background-image: url("../assets/bg_image1.jpg");
-    
->>>>>>> af3af06a6bc0fd863aa0dbeb51896ff462116dfa
     
 }
 .form
@@ -148,7 +76,6 @@ section
     justify-content: center;
     display: flex;
 
->>>>>>> 37861654eff9d6d4b558a71d3a7c44969e1538ba
 }
 .form .inputBox
 {

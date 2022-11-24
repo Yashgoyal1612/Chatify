@@ -69,11 +69,7 @@ const Container = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-<<<<<<< HEAD
-  background-color: #131324     ;
-=======
   //background-color: #131324;
->>>>>>> 37861654eff9d6d4b558a71d3a7c44969e1538ba
   .container {
     // border:solid white;
     padding-top:4px;
