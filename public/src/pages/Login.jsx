@@ -13,8 +13,13 @@ export default function Login() {
   const [values, setValues] = useState({ username: "", password: "" });
   const toastOptions = {
     position: "bottom-center",
+<<<<<<< HEAD
     autoClose: 1400,
     pauseOnHover: true,
+=======
+    autoClose: 1200,
+    pauseOnHover: false,
+>>>>>>> 37861654eff9d6d4b558a71d3a7c44969e1538ba
     draggable: true,
     theme: "light",
   };
