@@ -22,7 +22,7 @@ export default function ChatContainer({ currentChat, socket }) {
     setMessages(response.data);
   }, [currentChat]);
 
-  useEffect(() => {
+  useEffect(() => { 
     const getCurrentChat = async () => {
       if (currentChat) {
         await JSON.parse(
