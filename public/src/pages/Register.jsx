@@ -6,16 +6,16 @@ import { useNavigate, Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { registerRoute } from "../utils/APIRoutes";
-import "./register.scss"
+// import "./register.scss"
 
 export default function Register() {
   const navigate = useNavigate();
   const toastOptions = {
-    position: "bottom-right",
-    autoClose: 8000,
+    position: "bottom-center",
+    autoClose: 1400,
     pauseOnHover: true,
     draggable: true,
-    theme: "dark",
+    theme: "light",
   };
   const [values, setValues] = useState({
     username: "",
@@ -123,7 +123,35 @@ export default function Register() {
             Already have an account ? <Link to="/login">Login.</Link>
           </span>
         </form> */}
-        <div className="register">
+         <section>
+      <div className="con">
+        <div className="form">
+            <h1>Register</h1>            
+            <form action="" onSubmit={(event) => handleSubmit(event)}>
+            <div className="inputBox">
+                  <input type="text" placeholder="Username" name="username" onChange={(e) => handleChange(e)} min="3"/>
+            </div>    
+            <div className="inputBox">
+            <input type="email" placeholder="Email" name="email" onChange={(e) => handleChange(e)}/>
+            </div>
+            <div className="inputBox">
+                  <input type="password" placeholder="Password" name="password" onChange={(e) => handleChange(e)} />
+            </div>
+            <div className="inputBox">
+            <input type="password" placeholder="Confirm Password" name="confirmPassword" onChange={(e) => handleChange(e)}/>
+            </div>
+            <div className="inputBox">
+                  <input type="submit" value="Register"/>
+            </div>
+              {/* <p class="forget">Already on Chatify ? <a href="/login">Login</a></p> */}
+          <span className="forget">
+            Already have an account ? <Link to="/login">Login.</Link>
+          </span>
+            </form>
+          </div>
+          </div>
+          </section>
+        {/* <div className="register">
             <div className="card">
                 <div className="left">
                     <h1>Chatify</h1>
@@ -145,7 +173,7 @@ export default function Register() {
                     </form>
                 </div>
             </div>
-        </div>
+        </div> */}
       {/* </FormContainer> */}
       <ToastContainer />
     </>

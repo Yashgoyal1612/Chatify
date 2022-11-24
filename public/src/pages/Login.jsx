@@ -12,11 +12,11 @@ export default function Login() {
   const navigate = useNavigate();
   const [values, setValues] = useState({ username: "", password: "" });
   const toastOptions = {
-    position: "bottom-right",
-    autoClose: 8000,
+    position: "bottom-center",
+    autoClose: 1400,
     pauseOnHover: true,
     draggable: true,
-    theme: "dark",
+    theme: "light",
   };
   useEffect(() => {
     if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
@@ -93,8 +93,8 @@ export default function Login() {
         </form> */}
 
       {/* ITS MINE */}
-      <section>
-      <div className="container">
+      <section >
+      <div className="con">
         <div className="form">
             <h1>Login</h1>            
             <form action="" onSubmit={(event) => handleSubmit(event)}>
@@ -107,8 +107,10 @@ export default function Login() {
             <div className="inputBox">
                   <input type="submit" value="Login"/>
             </div>
-              <p class="forget">No account yet ? <a href="/register">Register</a></p>
-            
+              {/* <p class="forget">No account yet ? <a href="/register">Register</a></p> */}
+          <span className="forget">
+            Don't have an Account?<Link to="/register">Register.</Link>
+          </span>
             </form>
           </div>
           </div>
