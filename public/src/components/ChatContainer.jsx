@@ -109,6 +109,15 @@ export default function ChatContainer({ currentChat, socket }) {
 
 const Container = styled.div`
   display: grid;
+  position: relative;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-right: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-radius:30px;
+  // border:solid white;
   grid-template-rows: 10% 80% 10%;
   gap: 0.1rem;
   overflow: hidden;
@@ -116,6 +125,22 @@ const Container = styled.div`
     grid-template-rows: 15% 70% 15%;
   }
   .chat-header {
+    
+    content: '';
+    left: 25%;
+    bottom: -10px;
+    width: 100%;
+    border-bottom:2px black;
+    // height: 1px;
+    background: #fff;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+
+    // justify-content: center;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -137,6 +162,7 @@ const Container = styled.div`
     }
   }
   .chat-messages {
+    
     padding: 1rem 2rem;
     display: flex;
     flex-direction: column;
@@ -156,6 +182,7 @@ const Container = styled.div`
       .content {
         max-width: 40%;
         overflow-wrap: break-word;
+        
         padding: 1rem;
         font-size: 1.1rem;
         border-radius: 1rem;
@@ -168,13 +195,13 @@ const Container = styled.div`
     .sended {
       justify-content: flex-end;
       .content {
-        background-color: #4f04ff21;
+        background-color:#da6e6e;
       }
     }
     .recieved {
       justify-content: flex-start;
       .content {
-        background-color: #9900ff20;
+        background-color: #787070;
       }
     }
   }

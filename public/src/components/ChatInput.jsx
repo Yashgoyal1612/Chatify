@@ -50,9 +50,24 @@ export default function ChatInput({ handleSendMsg }) {
 
 const Container = styled.div`
   display: grid;
+
+  content: '';
+  left: 25%;
+  bottom: -10px;
+  width: 100%;
+  border-bottom:2px black;
+  // height: 1px;
+  background: #fff;
+
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+  border: 1px solid rgba(255,255,255,0.5);
+
   align-items: center;
+  // border-radius: 3.5rem;
   grid-template-columns: 5% 95%;
-  background-color: #080420;
+  // background-color: #080420;
   padding: 0 2rem;
   @media screen and (min-width: 720px) and (max-width: 1080px) {
     padding: 0 1rem;
@@ -61,6 +76,7 @@ const Container = styled.div`
   .button-container {
     display: flex;
     align-items: center;
+    
     color: white;
     gap: 1rem;
     .emoji {

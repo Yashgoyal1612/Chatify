@@ -66,16 +66,35 @@ export default function Contacts({ contacts, changeChat }) {
 }
 const Container = styled.div`
   display: grid;
+  background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
   grid-template-rows: 10% 75% 15%;
+  border-radius: 2rem;
   overflow: hidden;
-  background-color: #080420;
+  // background-color: #080420;
   .brand {
     display: flex;
+    
+    content: '';
+    left: 25%;
+    bottom: -10px;
+    width: 100%;
+    border-bottom:2px black;
+    // height: 1px;
+    background: #fff;
+
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+
     align-items: center;
     gap: 1rem;
     justify-content: center;
     img {
-      height: 2rem;
+      height: 0rem;
     }
     h3 {
       color: white;
@@ -83,6 +102,7 @@ const Container = styled.div`
     }
   }
   .contacts {
+    padding-top:20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,11 +117,11 @@ const Container = styled.div`
       }
     }
     .contact {
-      background-color: #ffffff34;
-      min-height: 5rem;
+      background-color: ;
+      height: 3.5rem;
       cursor: pointer;
       width: 90%;
-      border-radius: 0.2rem;
+      border-radius: 1.5rem;
       padding: 0.4rem;
       display: flex;
       gap: 1rem;
@@ -109,7 +129,8 @@ const Container = styled.div`
       transition: 0.5s ease-in-out;
       .avatar {
         img {
-          height: 3rem;
+          padding-top:2.8px;
+          height: 2.3rem;
         }
       }
       .username {
@@ -119,23 +140,33 @@ const Container = styled.div`
       }
     }
     .selected {
-      background-color: #9a86f3;
+      background-color: #da6e6e;
     }
   }
 
   .current-user {
-    background-color: #0d0d30;
+    // background-color: #0d0d30;
+    
+
+    // background: rgba(255,255,255,0.1);
+    // backdrop-filter: blur(10px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    // border: 1px solid rgba(255,255,255,0.5);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: .5rem;
     .avatar {
+      padding-top:36px;
       img {
-        height: 4rem;
-        max-inline-size: 100%;
+        
+        height: 3rem;
+        max-inline-size: 90%;
       }
     }
     .username {
+      padding-top:36px;
       h2 {
         color: white;
       }

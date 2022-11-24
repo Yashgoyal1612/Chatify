@@ -109,7 +109,8 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 3rem;
-  background-color: #131324;
+  // background-color: #fff;
+  background-image: url('../assets/1.png');
   height: 100vh;
   width: 100vw;
 

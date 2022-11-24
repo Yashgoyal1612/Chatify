@@ -12,11 +12,11 @@ export default function Login() {
   const navigate = useNavigate();
   const [values, setValues] = useState({ username: "", password: "" });
   const toastOptions = {
-    position: "bottom-right",
-    autoClose: 8000,
-    pauseOnHover: true,
+    position: "bottom-center",
+    autoClose: 1200,
+    pauseOnHover: false,
     draggable: true,
-    theme: "dark",
+    theme: "light",
   };
   useEffect(() => {
     if (localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)) {
@@ -93,41 +93,28 @@ export default function Login() {
         </form> */}
 
       {/* ITS MINE */}
-      <div className="login">
-        <div className="card">
-          <div className="left">
-            <h1>Chatify</h1>
-            <p>Chat applications allow you to stay connected with other people who may be using the application even on the other side of the world.</p>
-            <span>Don't you have an account?</span>
-            <Link to="/register">
-              <button>Register</button>
-            </Link>
-          </div>
-          <div className="right">
-            <h1>Login</h1>
-            <div className="brand">
-              {/* <img alt="logo" /> */}
-              {/* <h1>snappy</h1> */}
-            </div>
+      <section >
+      <div className="con">
+        <div className="form">
+            <h1>Login</h1>            
             <form action="" onSubmit={(event) => handleSubmit(event)}>
-              <input
-                type="text"
-                placeholder="Username"
-                name="username"
-                onChange={(e) => handleChange(e)}
-                min="3"
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                name="password"
-                onChange={(e) => handleChange(e)}
-              />
-              <button type="submit">Log In</button>
+            <div className="inputBox">
+                  <input type="text" placeholder="Username" name="username" onChange={(e) => handleChange(e)} min="3"/>
+            </div>    
+            <div className="inputBox">
+                  <input type="password" placeholder="Password" name="password" onChange={(e) => handleChange(e)} />
+            </div>
+            <div className="inputBox">
+                  <input type="submit" value="Login"/>
+            </div>
+              {/* <p class="forget">No account yet ? <a href="/register">Register</a></p> */}
+          <span className="forget">
+            Don't have an Account?<Link to="/register">Register.</Link>
+          </span>
             </form>
           </div>
-        </div>
-      </div>
+          </div>
+          </section>
       {/* </FormContainer> */}
       <ToastContainer />
       {/* ITS MINE */}

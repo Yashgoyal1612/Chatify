@@ -1,105 +1,139 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    overflow: hidden;
+   background-image: url('../assets/1.png');
 
+    background-size: cover;
+}
+section
+{
+    /* centering the items  */
+    border: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    // background: linear-gradient(to bottom,#f1f4f9,#dff1ff);
+}
+.con
+{
+    
+    position: relative;
+    width: 350px;
+    min-height: 400px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    
+}
+.form
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    
+}
+.form h1
+{
+    /* Log in heading  */
+    position: relative;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+    justify-content: center;
+    display: flex;
+    
+}
+.form h1::before
+{
+    border-bottom: #666;
+    /* underlining  */
+    content: '';
+    position: absolute;
+    left: 25%;
+    bottom: -10px;
+    width: 50%;
+    height: 3px;
+    background: #fff;
+    justify-content: center;
+    display: flex;
 
-body{
-  margin: 0px;
-  font-family: 'Cabin', sans-serif;
-  // font-family: 'Nanum Brush Script', cursive;
+}
+.form .inputBox
+{
+    /* input boxes  */
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    
+}
+.form .inputBox input
+{
+    /* the inputs  */
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255,255,255,0.5);
+    border-right: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.form .inputBox input::placeholder
+{
+    /* placeholder */
+    color: #fff;
 
 }
 
-.login {
-  height: 100vh;
-    margin-top: 0px;
-    background-color: rgb(178, 167, 235);
-    padding-top: 0px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    // background-image: url(https://wallpaperaccess.com/full/1455621.jpg);
+.form .inputBox input[type="submit"]
+{
+    /* the submit button  */
+    background: #fff;
+    color: #666;
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
     
-    .card { 
-      width: 50%;
-      height: 50%;
-      display: flex;
-      background-color: white;
-      border-radius: 10px;
-      min-height: 600px;
-      overflow: hidden;
-      color: rgb(0, 0, 0);
-    box-shadow: 0em 0em 9em;
-    // border: black;
-      .left {
-        flex: 1;
-        background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
-          url("https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600")
-            center;
-        background-size: cover;
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        color: white;
-        h1 {
-          font-size: 50px;
-          line-height: 50px;
-        }
-        // p {
-        // }
-        span {
-          font-size: 14px;
-        }
-        
-        button {
-          width: 50%;
-          padding: 10px;
-          border: none;
-          background-color: white;
-          color: rebeccapurple;
-          font-weight: bold;
-          cursor: pointer;
-        }
-      }
-  
-      .right {
-        flex: 1;
-        padding: 50px;
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        justify-content: center;
-  
-        h1 {
-        color: #555;
-        }
-        
-        form {
-          display: flex;
-          flex-direction: column;
-          gap: 30px;
-
-          // .field {
-          // border: none;
-          // border-bottom: 1px solid lightgray;
-          // padding: 15px 10px;
-          // }
-          
-          input {
-          border: none;
-          border-bottom: 1px solid lightgray;
-          padding: 15px 10px;
-          }
-          
-          button {
-            width: 50%;
-            padding: 10px;
-            border: none;
-            background-color: #938eef;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
+}
+/* Sign */
+.forget
+{
+    margin-top: 5px;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+}
+.forget a
+{
+    /* register  */
+    color: #fff;
+    margin-left:2% ;
+    font-weight: 600;
+    
+}
