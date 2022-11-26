@@ -90,11 +90,13 @@ export default function ChatContainer({ currentChat, socket }) {
           return (
             <div ref={scrollRef} key={uuidv4()}>
               <div
+              
                 className={`message ${
                   message.fromSelf ? "sended" : "recieved"
                 }`}
               >
                 <div className="content ">
+
                   <p>{message.message}</p>
                 </div>
               </div>
@@ -194,6 +196,7 @@ const Container = styled.div`
     }
     .sended {
       justify-content: flex-end;
+
       .content {
         background-color:#da6e6e;
       }
